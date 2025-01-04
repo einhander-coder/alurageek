@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <!--CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ttps://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!--Styles (css)-->
+    <link rel="stylesheet" href="../styles/base/root.css">
+    <link rel="stylesheet" href="../styles/base/header.css"> 
+    <link rel="stylesheet" href="../styles/base/footer.css"> 
+    <link rel="stylesheet" href="../styles/base/dark-mode.css"> 
+    <link rel="stylesheet" href="../styles/productos-all/all-products.css">  
+    <!--Fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">   
+</head>
+       <body>
+        <header class="header">
+             <div class="header-busqueda">
+                <div class="logo">
+                    <a href="../index.html" class="header-link">
+                        <img src="../assets/Logo_alura_geek.svg" alt="Alura Geek Logo" class="header-link">
+                    </a>
+                    <div class="header_busqueda-ocultar">
+                        <input type="text" class="input_busqueda" placeholder="Que Desea Buscar?">
+                        <a href="#" class="icon_busqueda"></a>
+                    </div>
+                </div>
+             </div>
+        </header>
+        <div class="float_menu">
+             <div class="icon_menu" data-menu="float">
+                 <img src="../assets/starwars-tropper.svg" alt="boton icono Star Wars Trooper">
+             </div>
+         <div class="btn_toggle-none" data-btns>  
+            <label for="checkbox" class="switch">
+                <i class="fa-solid fa-moon "></i>
+            </label>
+        </div>
+        <div class="btn_search none" data-btns>
+             <a class="search_link">
+                <img class="ing_search" src="../assets/icon-search.svg" alt="boton icono SW Trooper">
+             </a>            
+        </div>
+        <div class="icon_top-container">
+            <div class="to_top" data-menu="float"></div>
+             <a class="to_top-link" href="#"><i class="bi bi-chevron-double-up"></i></a>
+           </div>
+        </div>
+    </div>
+    <main>
+        <section class="producto__add">
+            <div class="producto__caja">
+                <form class="producto__form"  data-form>
+                    <h1 class="producto__titulo">Agregar nuevo producto</h1>
+                    <div class="input__container ">
+                        <label for="">Url de imagen</label>
+                        <input class="producto__imagen" type="text" placeholder="https://example.com/my-img.png"  required data-url>
+                    </div>
+                    <div class="input__container">
+                        <label for="">Categoría</label>
+                        <input class="producto__categoria" type="text" name="producto" required placeholder="consolas" data-category>
+                    </div>
+                    <div class="input__container">
+                        <label for="">Nombre del producto</label>
+                        <input class="producto__nombre" type="text" name="nombre" data-name>
+                    </div>
+                    <div class="input__container">
+                        <label for="precio">Precio del producto</label>
+                        <input class="producto__precio" type="text" required placeholder="$200.00" data-price>
+                    </div>
+                    <div class="input__container">
+                        <label for="">Descripción del producto</label>
+                        <textarea class="producto__descripcion" name="description" cols="30" rows="10" data-description></textarea>
+                    </div>
+                    <input class="input__btn" type="submit" value="Agregar producto">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_logo-links">
+                 <div class="footer_logo"><a href=""></div>
+                 <img src="../assets/Logo_alura_geek.svg" alt="logo alurageek"></a>
+            </div>
+            <nav class="footer_links">
+                <ul>
+                    <li><a href="#">Quienes Somos</a></li>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Programa de Fidelidad</a></li>
+                    <li><a href="#">Nuestras Tiendas</a></li>
+                    <li><a href="#">Ventas Mayoristas</a></li>
+                    <li><a href="#">Anuncie aquí</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <form class="footer_contacto">
+            <h2>Hable con Nosotros</h2>
+              <div class="contacto_nombre">
+                  <label class="label_nombre" for="name">Nombre</label>
+                  <input class="nombre" type="name" placeholder="John Doe" title="Solo texto (letras) y espacios en blanco" required>           
+              </div>
+              <div class="contacto_nombre">
+                  <input class="nombre" type="email" placeholder="ejemplo@gmail.com" title="Este no es un correo valido." required>
+              </div>
+              <textarea class="footer_textarea" name="" cols="30" rows="10" placeholder="Escribe tu mensaje" required>
+              </textarea>
+              <input type="submit" class="submit">
+        </form>
+    </div>
+    </footer>
+    <section class="rodapie">
+          <div class="rodapie_container">
+             <a class="rodapie_link" href="">
+                <i class="fa-brands fa-github-alt"></i>
+             </a>
+          </div>
+          <a class="rodapie_link" href="">
+            <i class="fa-brands fa-linkedin"></i>
+         </a>
+      </div>
+      <div class="rodapie_credito">
+        <p>Desarrollado Por Frantz Hinrichsen</p>
+        <p>©2024</p>
+      </div>
+    </section>
+    <!--Referencias Scripts (Librerias)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../assets/controllers/admin.controllers.js"></script>
+    <script type="module" src="../services/modules.js"></script>
+</body>
+</html>
